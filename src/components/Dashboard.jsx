@@ -16,7 +16,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/profile', {
+        const response = await axios.get('https://jobtracker-m84h.onrender.com/profile', {
           withCredentials: true,
           params: {
             token: authToken,
@@ -51,7 +51,7 @@ const Dashboard = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:5000/emails', {
+      const response = await axios.get('https://jobtracker-m84h.onrender.com/emails', {
         withCredentials: true,
         params: {
           token: authToken,

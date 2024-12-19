@@ -13,7 +13,7 @@ const Home = () => {
 
 
     const onClickGoogleSignIn = () => {
-        axios.get("http://localhost:5000/auth/google").then((response)=>{
+        axios.get("https://jobtracker-m84h.onrender.com//auth/google").then((response)=>{
             setStatus(response.data)
             console.log(response.data)
     
