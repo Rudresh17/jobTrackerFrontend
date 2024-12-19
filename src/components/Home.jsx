@@ -13,7 +13,7 @@ const Home = () => {
 
 
     const onClickGoogleSignIn = () => {
-        axios.get("http://localhost:5000/auth/google").then((response)=>{
+        axios.get("https://jobtracker-m84h.onrender.com//auth/google").then((response)=>{
             setStatus(response.data)
             console.log(response.data)
     
@@ -31,7 +31,7 @@ const Home = () => {
       <h1>Welcome to Job Tracker</h1>
     </div>
     <div className="d-flex gap-2 mb-2">
-    <a href="http://localhost:5000/auth/google">
+    <a href="https://jobtracker-m84h.onrender.com/auth/google">
             <button style={{ padding: '10px', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}>
                 Sign in With Google
             </button>
