@@ -13,38 +13,38 @@ const Dashboard = () => {
   const authToken = Cookies.get('authToken');
 
   // Fetch user profile on load
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get('https://jobtracker-m84h.onrender.com/profile', {
-          withCredentials: true,
-          params: {
-            token: authToken,
-          },
-        });
-        setUser(response.data);
-      } catch (err) {
-        console.error('Error fetching user profile:', err);
-      }
-    };
-    fetchUser();
-  }, [authToken]);
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     try {
+  //       const response = await axios.get('https://jobtracker-m84h.onrender.com/profile', {
+  //         withCredentials: true,
+  //         params: {
+  //           token: authToken,
+  //         },
+  //       });
+  //       setUser(response.data);
+  //     } catch (err) {
+  //       console.error('Error fetching user profile:', err);
+  //     }
+  //   };
+  //   fetchUser();
+  // }, [authToken]);
 
   // Fetch saved emails
-  const fetchSavedEmails = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const response = await axios.get('http://localhost:5000/saved-emails', {
-        withCredentials: true,
-        params: { token: authToken }, // Pass the token if required
-      });
-      setEmails(response.data);
-    } catch (err) {
-      setError('Failed to fetch saved emails');
-    }
-    setLoading(false);
-  };
+  // const fetchSavedEmails = async () => {
+  //   setLoading(true);
+  //   setError(null);
+  //   try {
+  //     const response = await axios.get('http://localhost:5000/saved-emails', {
+  //       withCredentials: true,
+  //       params: { token: authToken }, // Pass the token if required
+  //     });
+  //     setEmails(response.data);
+  //   } catch (err) {
+  //     setError('Failed to fetch saved emails');
+  //   }
+  //   setLoading(false);
+  // };
 
   // Fetch emails related to job applications
   const fetchEmails = async () => {
