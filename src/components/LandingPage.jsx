@@ -48,7 +48,7 @@ const LandingPage = () => {
         {/* Call-to-Action */}
         <Button
           variant="contained"
-          href="http://localhost:5000/auth/google"
+          href="https://job-tracker-frontend-lake.vercel.app/auth/google"
           color="primary"
           size="large"
           sx={{
