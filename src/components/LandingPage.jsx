@@ -48,7 +48,7 @@ const LandingPage = () => {
         {/* Call-to-Action */}
         <Button
           variant="contained"
-          href="https://job-tracker-frontend-lake.vercel.app/auth/google"
+          href="https://jobtracker-m84h.onrender.com/auth/google"
           color="primary"
           size="large"
           sx={{
