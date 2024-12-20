@@ -51,6 +51,7 @@ const Dashboard = () => {
     setLoading(true);
     setError(null);
     try {
+      console.log(document.cookie);
       const response = await axios.get('https://jobtracker-m84h.onrender.com/emails', {
         withCredentials: true,
         
