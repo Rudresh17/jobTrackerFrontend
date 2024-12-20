@@ -53,9 +53,7 @@ const Dashboard = () => {
     try {
       const response = await axios.get('https://jobtracker-m84h.onrender.com/emails', {
         withCredentials: true,
-        params: {
-          token: authToken,
-        },
+        
       });
       setEmails(response.data);
     } catch (err) {
